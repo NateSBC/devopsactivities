@@ -1,7 +1,17 @@
-number = int(input("Enter a number: ")) # The number we want the factorial of
-factorial = 1 # Start with 1, as anything multiplied by 1 is itself
-i = 1 # Counter for the loop
-while i <= number: # Keep going while 'i' is less than or equal to 'number'
-  factorial = factorial * i # Multiply the 'factorial' by 'i'
-  i = i + 1 # Increase 'i' for the next multiplication
-print(factorial) # Print the final result
+attempts = 0
+max_attempts = 3
+
+while attempts < max_attempts:
+  # Your code that asks the user for input
+  # ... 
+  # Your code that checks if the input is correct
+  # ...
+  if input_is_correct:
+    # Success, exit the loop
+    break
+  else:
+    attempts += 1
+    print(f"Incorrect. You have {max_attempts - attempts} attempts left.")
+
+if attempts == max_attempts:
+  print("None")

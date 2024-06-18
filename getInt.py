@@ -12,6 +12,25 @@
 
 minimum = 1
 maximum = 100
+counter = 1
 
-while 
+
+
+while counter <= 3:
   value = int(input("Enter a number between 1 and 100: "))
+  if value >= minimum and value <= maximum:
+    print(value)
+    break
+  
+  elif counter < 3:
+    counter += 1
+    print (f"{3 - counter} attempts left")
+
+  elif counter == 3:
+    print ("None")
+    break
+
+
+
+
+    

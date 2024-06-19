@@ -36,7 +36,7 @@ def play_round():
         
     else:
             print("Invalid choice. Please enter again.")
-
+            return play_round()
     
         
 
@@ -46,15 +46,15 @@ num_of_rounds = -1
 computer_wins = 0
 user_wins = 0
 
-while True:
-    num_of_rounds += 1
+while play_again == "y":
+        num_of_rounds += 1
+        result = play_round()
+                if 
     
 
     print(f"Number of Rounds = {num_of_rounds}\nUser Wins = {user_wins}\nComputer Wins = {computer_wins}")
     
     play_again = input("Do you want to play again? (y/n): ")
-    if play_again!= "y":
-        break
 
     
     play_round()

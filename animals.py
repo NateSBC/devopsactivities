@@ -33,15 +33,26 @@ class Owl(Bird):
       super().__init__(name, species)
       self.colour = colour
 
+    def peak(self):
+      print(f"{self.name} is peaking")
+
 
 class Dodo(Bird):
     def __init__(self, name, species, colour):
       super().__init__(name, species)
       self.colour = colour
 
+    def fly(self):
+      print("fly")
+
+    def __str__(self):
+      return super().__str__() + f"- {self.breed}"
+
 bird1 = Owl("Devi", "Owl", "Blue")
 bird2 = Dodo("Owlie", "Dodo", "Red")
 
 print(bird1.name, bird1.species, bird1.colour)
 print(bird2.name, bird2.species, bird2.colour)
+bird1.peak()
+bird2.fly()
   
